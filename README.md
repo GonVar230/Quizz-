@@ -29,3 +29,12 @@
 </ul>
 
 <hr>
+
+<h2> Future Improvements</h2>
+<ul>
+  <li>Make the quiz responsive for different screen sizes</li>
+  <li>Add quizzes for other technologies to use the app as a study tool</li>
+  <li>Implement difficulty levels (beginner, intermediate, advanced)</li>
+  <li>Display a final result comparing correct and incorrect answers</li>
+  <li>Add final feedback based on the score obtained</li>
+</ul>
