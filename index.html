@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizaa JavaScript</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <header>
+        <img src="./assets/logo-header/logo-Js.png" alt="logo de Javascript">
+        <nav>
+            
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="apertura">
+            <h1>Bienvenido a un Quizz de <span>JS</span></h1>
+            <p>Este cuestionario contiene 15 preguntas breves diseñadas para evaluar tus conocimientos y obtener una visión más clara sobre tu nivel actual. No lleva más de unos minutos completarlo.</p>
+            <button id="comenzar">Comenzar</button>
+        </div>
+
+        <div class="contenedor__principal">
+
+            <div>
+                <span id="span-contador">1-</span>
+                <p id="pregunta"></p>
+            </div>
+
+            <div class="opciones">
+                <span>A</span>
+                <div class="opcion">
+                    <p id="respuestaA"></p>
+                </div>
+            </div>
+
+            <div class="opciones">
+                <span>B</span>
+                <div class="opcion">
+                    <p id="respuestaB"></p>
+                </div>
+            </div>
+
+            <div class="opciones">
+                <span>C</span>
+                <div>
+                    <p id="respuestaC"></p>
+                </div>
+            </div>
+
+
+            <div class="opciones">
+                <span>D</span>
+                <div>
+                    <p id="respuestaD"></p>
+                </div>
+            </div>
+
+            <div class="confirmar">
+                <button id="confirmar">confirmar</button>
+            </div>
+
+            <button id="next"><i class="bi bi-arrow-right-circle-fill"></i></button>
+            <button id="previous"><i class="bi bi-arrow-left-circle-fill"></i></button>
+
+
+        </div>
+
+        <div class="contenedor__derecha">
+
+            <div class="contenedor__resultados">
+                <div id="referencia-1">1</div>
+                <div id="referencia-2">2</div>
+                <div id="referencia-3">3</div>
+                <div id="referencia-4">4</div>
+                <div id="referencia-5">5</div>
+                <div id="referencia-6">6</div>
+                <div id="referencia-7">7</div>
+                <div id="referencia-8">8</div>
+                <div id="referencia-9">9</div>
+                <div id="referencia-10">10</div>
+                <div id="referencia-11">11</div>
+                <div id="referencia-12">12</div>
+                <div id="referencia-13">13</div>
+                <div id="referencia-14">14</div>
+                <div id="referencia-15">15</div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

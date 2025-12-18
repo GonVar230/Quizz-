@@ -1,0 +1,147 @@
+[
+    {
+        "pregunta": "¿Qué método de Set verifica si un valor existe dentro del conjunto?",
+        "opciones": ["add()", "has()", "includes()", "exist()"],
+        "respuesta": "has()"
+    },
+    {
+        "pregunta": "¿Qué método convierte un objeto JSON a texto?",
+        "opciones": ["JSON.parse()", "JSON.stringify()", "Object.keys()", "toString()"],
+        "respuesta": "JSON.stringify()"
+    },
+    {
+        "pregunta": "¿Cuál de estos métodos devuelve un array con las claves de un objeto?",
+        "opciones": ["Object.values()", "Object.keys()", "Object.entries()", "Object.list()"],
+        "respuesta": "Object.keys()"
+    },
+    {
+        "pregunta": "¿Qué operador permite copiar o fusionar objetos en JavaScript?",
+        "opciones": ["??", "...", "=>", "::"],
+        "respuesta": "..."
+    },
+    {
+        "pregunta": "¿Qué devuelve Object.entries(obj)?",
+        "opciones": [
+        "Un array con los valores",
+        "Un array de pares [clave, valor]",
+        "Un objeto copiado",
+        "Un Set con las claves"
+        ],
+        "respuesta": "Un array de pares [clave, valor]"
+    },
+    {
+        "pregunta": "¿Cuál es la forma correcta de crear un Set a partir de un array?",
+        "opciones": [
+        "const myArray = Set(array)",
+        "const myArray = new Set(array)",
+        "const myArray = Set.new(array)",
+        "const myArray = set(array)"
+        ],
+        "respuesta": "const myArray = new Set(array)"
+    },
+    {
+        "pregunta": "¿Qué método elimina todos los elementos de un Set?",
+        "opciones": ["clear()", "deleteAll()", "remove()", "reset()"],
+        "respuesta": "clear()"
+    },
+    {
+        "pregunta": "¿Qué hace JSON.parse()?",
+        "opciones": [
+        "Convierte un objeto en texto",
+        "Convierte texto JSON en un objeto",
+        "Crea una copia superficial",
+        "Crea un Set"
+        ],
+        "respuesta": "Convierte texto JSON en un objeto"
+    },
+    {
+        "pregunta": "¿Cómo se recorre un arreglo 2D correctamente?",
+        "opciones": [
+        "Con un único for",
+        "Con dos for anidados",
+        "Con Object.keys",
+        "Con JSON.stringify()"
+        ],
+        "respuesta": "Con dos for anidados"
+    },
+    {
+        "pregunta": "¿Qué operador evita errores al acceder a propiedades anidadas inexistentes?",
+        "opciones": ["?.", "??", "!", "::"],
+        "respuesta": "?."
+    },
+    {
+        "pregunta": "¿Cuál de estos métodos elimina los espacios al inicio y al final de una cadena?",
+        "opciones": ["trim()", "slice()", "clean()", "removeSpaces()"],
+        "respuesta": "trim()"
+    },
+    {
+        "pregunta": "¿Qué método convierte una cadena en un entero?",
+        "opciones": ["parseInt()", "toNumber()", "Number.int()", "int()"],
+        "respuesta": "parseInt()"
+    },  
+    {
+        "pregunta": "¿Qué método agrega un elemento al final de un array?",
+        "opciones": ["push()", "pop()", "shift()", "unshift()"],
+        "respuesta": "push()"
+    },
+    {
+        "pregunta": "¿Cómo se declara una función flecha?",
+        "opciones": ["function => ()", "() => {}", "=> {}", "() -> {}"],
+        "respuesta": "() => {}"
+    },
+    {
+        "pregunta": "¿Qué devuelve 0 == false?",
+        "opciones": ["true", "false", "error", "undefined"],
+        "respuesta": "true"
+    },
+    {
+        "pregunta": "¿Qué método de array ejecuta una función por cada elemento?",
+        "opciones": ["forEach()", "loop()", "each()", "mapEach()"],
+        "respuesta": "forEach()"
+    },
+    {
+        "pregunta": "¿Qué palabra clave detiene un bucle?",
+        "opciones": ["break", "stop", "exit", "halt"],
+        "respuesta": "break"
+    },
+    {
+        "pregunta": "¿Qué método junta todos los números de un array en un solo valor?",
+        "opciones": ["reduce()", "map()", "sum()", "join()"],
+        "respuesta": "reduce()"
+    },
+    {
+        "pregunta": "¿Qué método agrega contenido HTML dentro de un elemento?",
+        "opciones": ["innerText", "insertHTML", "innerHTML", "putHTML"],
+        "respuesta": "innerHTML"
+    },
+    {
+        "pregunta": "¿Cuál método crea un nuevo elemento en el DOM?",
+        "opciones": ["document.create()", "document.new()", "document.createElement()", "createNode()"],
+        "respuesta": "document.createElement()"
+    },
+    {
+        "pregunta": "¿Qué método elimina el primer elemento de un array?",
+        "opciones": ["shift()", "pop()", "remove()", "slice()"],
+        "respuesta": "shift()"
+    },
+    {
+        "pregunta": "¿Qué método ordena un array?",
+        "opciones": ["order()", "sort()", "arrange()", "map()"],
+        "respuesta": "sort()"
+    },
+    {
+        "pregunta": "¿Qué método convierte un array en una sola cadena separada por un carácter?",
+        "opciones": ["split()", "join()", "concat()", "merge()"],
+        "respuesta": "join()"
+    },
+    {
+        "pregunta": "¿Qué método busca el índice de un elemento en un array?",
+        "opciones": ["indexOf()", "find()", "searchIndex()", "position()"],
+        "respuesta": "indexOf()"
+    },
+    {
+        "pregunta": "¿Qué método fusiona dos arrays?",
+        "opciones": ["merge()", "concat()", "combine()", "append()"],
+        "respuesta": "concat()"
+    }
+]

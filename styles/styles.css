@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --negro-elegante:#0F172A;
+    --gris-suave:#F7F7F7;
+    --gris-medio: #cdcdcd;
+    --amarillo-js:#F7DF1E;
+}
+
+*{
+    background-color: var(--gris-suave);
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto";
+}
+
+header{
+    height: 10dvh;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img{
+    height: 100px;
+}
+
+/* Apertura */
+
+.apertura{
+    position: absolute;
+    border: 1px solid var(--amarillo-js);
+    border-radius: 1rem;
+    padding: 3rem;
+    z-index: 1;
+    max-width: 500px;
+    top: 30%;
+}
+
+.apertura h1{
+    margin-bottom: 2rem;
+    color: var(--negro-elegante)
+}
+
+.apertura span{
+    color: var(--amarillo-js);
+}
+
+.apertura p{
+    color: var(--negro-elegante);
+    margin-bottom: 1.5rem;
+    line-height: 26px;
+}
+
+#comenzar{
+    padding: .7rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: var(--amarillo-js);
+    font-weight: bold;
+}
+
+#comenzar:hover{
+    opacity: .74;
+}
+
+/* main */
+main{
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contenedor__principal{
+    height: auto;
+    width: 600px;
+    border: 2px solid var(--negro-elegante);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: none;
+    position: relative;
+}
+
+.contenedor__principal div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    height: 120px;
+}
+
+#pregunta{
+    font-size: 1.7rem;
+    color: var(--negro-elegante);
+    margin: 0 2.2rem 0 1rem;
+}
+
+/* opciones */
+
+.opciones{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 1rem;
+    width: 90%;
+    padding: 1.5rem 0;
+    padding-left: 2rem;
+    border-radius: 1rem;
+    height: auto;
+    border: 2px solid var(--gris-medio);
+    cursor: pointer;
+}
+
+.opciones span{
+    padding: .7rem;
+    background-color: var(--gris-medio);
+    border-radius: .5rem;
+    color: var(--negro-elegante);
+}
+
+.opciones p{
+    font-size: 1.3rem;
+}
+
+.opciones.activo{
+    background-color: var(--amarillo-js);
+}
+
+.opciones.activo p {
+    background-color: var(--amarillo-js);
+}
+/* boton confirmacion */
+
+.confirmar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmar button{
+    padding: .8rem 3rem;
+    margin: .5rem 0;
+    letter-spacing: .5px;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: var(--amarillo-js);
+    font-weight: bold;
+    color: var(--gris-suave);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.confirmar button:hover{
+    opacity: .74;
+}
+
+
+/* para mostrar cuantas acerto */
+
+.contenedor__derecha{
+    height: auto;
+    padding: 2rem;
+    width: 400px;
+    margin-left: 1.5rem;
+    border-radius: 1rem;
+    display: none;
+}
+
+.contenedor__resultados{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    border: 2px solid var(--negro-elegante);
+    border-radius: 1rem;
+    margin: 0 1.5rem;
+}
+
+.contenedor__resultados div{
+    background-color: var(--gris-medio);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: 1rem;
+    color: var(--negro-elegante); 
+    position: relative;
+}
+
+
+
+/* PARA USAR EN JS Y MOSTRAR SI ESTA BIEN O MAL */
+
+.contenedor__resultados div::after {
+    content: ""; 
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.contenedor__resultados div.tic::after {
+    content: "✔";
+    color: #22c55e; 
+}
+
+
+.contenedor__resultados div.cruz::after {
+    content: "✖";
+    color: #ef4444; 
+}
+
+/* boton de  next */
+#next {
+    position: absolute;
+    right: 0;
+    transform: translateX(-30px) translateY(-45px);
+    cursor: pointer;
+    border: none;
+    transition: all .5s ease;
+}
+
+i {
+    color: var(--amarillo-js);
+    font-size: 2rem;
+}
+
+#previous {
+    position: absolute;
+    left: 0;
+    transform: translateX(30px) translateY(-45px);
+    cursor: pointer;
+    border: none;
+    transition: all .5s ease;
+}
+
+i {
+    color: var(--amarillo-js);
+    font-size: 2rem;
+}
+
+#next:hover,#previous:hover {
+    opacity: .74;
+}
+
+/* contador preguntas */
+
+#span-contador {
+    font-size: 1.7rem;
+    color: var(--negro-elegante);
+    padding-left: 1rem;
+    width: 100px;
+}
