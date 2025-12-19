@@ -2,13 +2,16 @@
 
 :root{
     --negro-elegante:#0F172A;
+    --border-soft: #e5e7eb;     
     --gris-suave:#F7F7F7;
     --gris-medio: #cdcdcd;
     --amarillo-js:#F7DF1E;
+    --bg-main: #f6f7f9; 
+    --yellow-soft: #fff7cc;      
 }
 
 *{
-    background-color: var(--gris-suave);
+    background-color: var(--bg-main);
     margin: 0;
     padding: 0;
 }
@@ -83,25 +86,43 @@ main{
 .contenedor__principal{
     height: auto;
     width: 600px;
-    border: 2px solid var(--negro-elegante);
+    border: 1px solid var(--negro-elegante);
     border-radius: 1rem;
     padding: 1rem;
     display: none;
     position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
-.contenedor__principal div:first-child{
+.direccionando {
+    margin: 1rem ;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-    height: 120px;
+    gap: .7rem;
+}
+
+.ubicando-estetica {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.ubicando-estetica hr {
+    border: 1px solid var(--amarillo-js);
+}
+
+#span-contador {
+    padding: .6rem;
+    background-color: var(--amarillo-js);
+    border-radius: 1.5rem;
 }
 
 #pregunta{
     font-size: 1.7rem;
     color: var(--negro-elegante);
-    margin: 0 2.2rem 0 1rem;
+    margin: 1.5rem 2.2rem 1rem 2.2rem;
 }
 
 /* opciones */
@@ -117,15 +138,17 @@ main{
     padding-left: 2rem;
     border-radius: 1rem;
     height: auto;
-    border: 2px solid var(--gris-medio);
+    border: 2px solid var(--border-soft);
     cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 .opciones span{
-    padding: .7rem;
-    background-color: var(--gris-medio);
-    border-radius: .5rem;
+    padding: .8rem;
+    background-color: var(--amarillo-js);
+    border-radius: 1rem;
     color: var(--negro-elegante);
+    font-weight: bold;
 }
 
 .opciones p{
@@ -133,12 +156,19 @@ main{
 }
 
 .opciones.activo{
-    background-color: var(--amarillo-js);
+    border: 2px solid var(--amarillo-js);
+    background: var(--yellow-soft);
+    border-color: var(--amarillo-js);
+    box-shadow:0 8px 18px rgba(250, 204, 21, 0.35);
 }
 
+
 .opciones.activo p {
-    background-color: var(--amarillo-js);
+    background: var(--yellow-soft);
+    border-color: var(--amarillo-js);
 }
+
+
 /* boton confirmacion */
 
 .confirmar{
@@ -156,7 +186,7 @@ main{
     cursor: pointer;
     background-color: var(--amarillo-js);
     font-weight: bold;
-    color: var(--gris-suave);
+    color: var(--negro-elegante);
     font-size: 1rem;
     letter-spacing: 2px;
 }
@@ -183,21 +213,23 @@ main{
     place-items: center;
     gap: 2.5rem;
     padding: 2.5rem;
-    border: 2px solid var(--negro-elegante);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
     border-radius: 1rem;
     margin: 0 1.5rem;
+    border: 1px solid var(--negro-elegante);
 }
 
 .contenedor__resultados div{
-    background-color: var(--gris-medio);
+    background-color: var(--amarillo-js);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 50px;
     min-width: 50px;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     color: var(--negro-elegante); 
     position: relative;
+    font-weight: bold;
 }
 
 
@@ -230,7 +262,6 @@ main{
     transform: translateX(-30px) translateY(-45px);
     cursor: pointer;
     border: none;
-    transition: all .5s ease;
 }
 
 i {

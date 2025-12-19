@@ -12,7 +12,7 @@ btnComenzar.addEventListener("click", () =>{
 
 let opcionSeleccionada = null;
 let contadorPreguntas = 1;
-let bloqueado = false; //  NUEVO
+let bloqueado = false;
 
 // historial real de preguntas
 let historial = [];
@@ -37,7 +37,8 @@ async function configurando() {
             contadorPreguntas++;
             mostrarPregunta(historial[indexActual]);
             restaurarEstilos(contadorPreguntas);
-            document.querySelector("#span-contador").textContent = `${contadorPreguntas} -`;
+            bloqueado = !!localStorage.getItem("pregunta_" + contadorPreguntas);
+            document.querySelector("#span-contador").textContent = `${contadorPreguntas}.`;
             return;
         }
 
@@ -51,11 +52,11 @@ async function configurando() {
 
         mostrarPregunta(random);
         limpiarEstilos();
+        bloqueado = false;
 
-        document.querySelector("#span-contador").textContent = `${contadorPreguntas} -`;
+        document.querySelector("#span-contador").textContent = `${contadorPreguntas}.`;
     });
 
-    // PREVIOUS
     previous.addEventListener("click", () => {
         if (indexActual === 0) return;
 
@@ -65,7 +66,9 @@ async function configurando() {
         mostrarPregunta(historial[indexActual]);
         restaurarEstilos(contadorPreguntas);
 
-        document.querySelector("#span-contador").textContent = `${contadorPreguntas} -`;
+        bloqueado = !!localStorage.getItem("pregunta_" + contadorPreguntas);
+
+        document.querySelector("#span-contador").textContent = `${contadorPreguntas}.`;
     });
 }
 
@@ -74,7 +77,7 @@ const items = document.querySelectorAll(".opciones");
 
 items.forEach(item => {
     item.addEventListener("click", () => {
-        if (bloqueado) return; //  BLOQUEO
+        if (bloqueado) return;
 
         items.forEach(i => i.classList.remove("activo"));
         item.classList.add("activo");
@@ -87,7 +90,7 @@ const btnConfirmar = document.querySelector("#confirmar");
 btnConfirmar.addEventListener("click", () => {
     if (!opcionSeleccionada) return;
 
-    bloqueado = true; //  BLOQUEA AL CONFIRMAR
+    bloqueado = true;
 
     const textoUsuario = opcionSeleccionada.querySelector("p").textContent.trim();
     const correcta = window.preguntaActual.respuesta.trim();
@@ -101,6 +104,8 @@ btnConfirmar.addEventListener("click", () => {
         estado = "correcta";
         opcionSeleccionada.style.border = "2px solid green";
         opcionSeleccionada.style.backgroundColor = "white";
+        opcionSeleccionada.style.boxShadow =
+        "0 12px 28px rgba(34, 197, 94, 0.55), 0 0 0 2px rgba(34, 197, 94, 0.15)";
         span.style.backgroundColor = "green";
         span.style.color = "white";
         parrafo.style.color = "green";
@@ -109,6 +114,8 @@ btnConfirmar.addEventListener("click", () => {
         estado = "incorrecta";
         opcionSeleccionada.style.border = "2px solid red";
         opcionSeleccionada.style.backgroundColor = "white";
+        opcionSeleccionada.style.boxShadow =
+        "0 12px 28px rgba(239, 68, 68, 0.55), 0 0 0 2px rgba(239, 68, 68, 0.15)";
         span.style.backgroundColor = "red";
         span.style.color = "white";
         parrafo.style.color = "red";
@@ -148,7 +155,6 @@ function mostrarPregunta(obj) {
     document.querySelector("#respuestaD").textContent = obj.opciones[3];
 
     opcionSeleccionada = null;
-    bloqueado = false; //  DESBLOQUEA AL CAMBIAR DE PREGUNTA
 
     items.forEach(i => i.classList.remove("activo"));
     limpiarEstilos();
@@ -159,6 +165,7 @@ function limpiarEstilos() {
     items.forEach(item => {
         item.style.border = "";
         item.style.backgroundColor = "";
+        item.style.boxShadow = "";
 
         const span = item.querySelector("span");
         const p = item.querySelector("p");
@@ -191,6 +198,8 @@ function restaurarEstilos(num) {
             if (estado === "correcta") {
                 item.style.border = "2px solid green";
                 item.style.backgroundColor = "white";
+                item.style.boxShadow =
+                "0 12px 28px rgba(34, 197, 94, 0.55), 0 0 0 2px rgba(34, 197, 94, 0.15)";
                 span.style.backgroundColor = "green";
                 span.style.color = "white";
                 p.style.color = "green";
@@ -198,6 +207,8 @@ function restaurarEstilos(num) {
             } else {
                 item.style.border = "2px solid red";
                 item.style.backgroundColor = "white";
+                item.style.boxShadow =
+                "0 12px 28px rgba(239, 68, 68, 0.55), 0 0 0 2px rgba(239, 68, 68, 0.15)";
                 span.style.backgroundColor = "red";
                 span.style.color = "white";
                 p.style.color = "red";
