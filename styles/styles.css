@@ -1,41 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+    :root{
     --negro-elegante:#0F172A;
-    --border-soft: #e5e7eb;     
+    --border-soft: #e5e7eb;
     --gris-suave:#F7F7F7;
     --gris-medio: #cdcdcd;
     --amarillo-js:#F7DF1E;
-    --bg-main: #f6f7f9; 
-    --yellow-soft: #fff7cc;      
-}
+    --bg-main: #f6f7f9;
+    --yellow-soft: #fff7cc;
+    }
 
-*{
+    *{
     background-color: var(--bg-main);
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+    }
 
-body{
+    body{
     font-family: "Roboto";
-}
+    }
 
-header{
+    header{
     height: 10dvh;
     max-width: 1140px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+    padding: 0 1rem;
+    }
 
-header img{
+    header img{
     height: 100px;
-}
+    }
 
-/* Apertura */
-
-.apertura{
+    /* Apertura */
+    .apertura{
     position: absolute;
     border: 1px solid var(--amarillo-js);
     border-radius: 1rem;
@@ -43,47 +44,53 @@ header img{
     z-index: 1;
     max-width: 500px;
     top: 30%;
-}
+    }
 
-.apertura h1{
+    .apertura h1{
     margin-bottom: 2rem;
     color: var(--negro-elegante)
-}
+    }
 
-.apertura span{
+    .apertura span{
     color: var(--amarillo-js);
-}
+    }
 
-.apertura p{
+    .apertura p{
     color: var(--negro-elegante);
     margin-bottom: 1.5rem;
     line-height: 26px;
-}
+    }
 
-#comenzar{
+    #comenzar{
     padding: .7rem 1rem;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
     background-color: var(--amarillo-js);
     font-weight: bold;
-}
+    }
 
-#comenzar:hover{
+    #comenzar:hover{
     opacity: .74;
-}
+    }
 
 /* main */
-main{
+    main{
     max-width: 1140px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 50px;
-}
+    padding: 0 1rem;
 
-.contenedor__principal{
+    /* Desktop: quiz a la izquierda, resultados a la derecha */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    }
+
+    /* Contenedor principal */
+    .contenedor__principal{
     height: auto;
     width: 600px;
     border: 1px solid var(--negro-elegante);
@@ -92,42 +99,41 @@ main{
     display: none;
     position: relative;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-}
+    }
 
-.direccionando {
+    .direccionando {
     margin: 1rem ;
     display: flex;
     gap: .7rem;
-}
+    }
 
-.ubicando-estetica {
+    .ubicando-estetica {
     display: flex;
     flex-direction: column;
     width: 100%;
     font-size: 2rem;
     letter-spacing: 2px;
     font-weight: bold;
-}
+    }
 
-.ubicando-estetica hr {
+    .ubicando-estetica hr {
     border: 1px solid var(--amarillo-js);
-}
+    }
 
-#span-contador {
+    #span-contador {
     padding: .6rem;
     background-color: var(--amarillo-js);
     border-radius: 1.5rem;
-}
+    }
 
-#pregunta{
-    font-size: 1.7rem;
+    #pregunta{
+    font-size: 1.5rem;
     color: var(--negro-elegante);
     margin: 1.5rem 2.2rem 1rem 2.2rem;
-}
+    }
 
-/* opciones */
-
-.opciones{
+    /* opciones */
+    .opciones{
     display: flex;
     justify-content: start;
     align-items: center;
@@ -141,43 +147,40 @@ main{
     border: 2px solid var(--border-soft);
     cursor: pointer;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-}
+    }
 
-.opciones span{
+    .opciones span{
     padding: .8rem;
     background-color: var(--amarillo-js);
     border-radius: 1rem;
     color: var(--negro-elegante);
     font-weight: bold;
-}
+    }
 
-.opciones p{
+    .opciones p{
     font-size: 1.3rem;
-}
+    }
 
-.opciones.activo{
+    .opciones.activo{
     border: 2px solid var(--amarillo-js);
     background: var(--yellow-soft);
     border-color: var(--amarillo-js);
     box-shadow:0 8px 18px rgba(250, 204, 21, 0.35);
-}
+    }
 
-
-.opciones.activo p {
+    .opciones.activo p {
     background: var(--yellow-soft);
     border-color: var(--amarillo-js);
-}
+    }
 
-
-/* boton confirmacion */
-
-.confirmar{
+    /* boton confirmacion */
+    .confirmar{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    }
 
-.confirmar button{
+    .confirmar button{
     padding: .8rem 3rem;
     margin: .5rem 0;
     letter-spacing: .5px;
@@ -189,25 +192,22 @@ main{
     color: var(--negro-elegante);
     font-size: 1rem;
     letter-spacing: 2px;
-}
+    }
 
-.confirmar button:hover{
+    .confirmar button:hover{
     opacity: .74;
-}
+    }
 
-
-/* para mostrar cuantas acerto */
-
-.contenedor__derecha{
+    /* Contenedor derecha (resultados) */
+    .contenedor__derecha{
     height: auto;
     padding: 2rem;
     width: 400px;
-    margin-left: 1.5rem;
     border-radius: 1rem;
     display: none;
-}
+    }
 
-.contenedor__resultados{
+    .contenedor__resultados{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
@@ -215,11 +215,10 @@ main{
     padding: 2.5rem;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
     border-radius: 1rem;
-    margin: 0 1.5rem;
     border: 1px solid var(--negro-elegante);
-}
+    }
 
-.contenedor__resultados div{
+    .contenedor__resultados div{
     background-color: var(--amarillo-js);
     display: flex;
     justify-content: center;
@@ -227,17 +226,14 @@ main{
     min-height: 50px;
     min-width: 50px;
     border-radius: 1.5rem;
-    color: var(--negro-elegante); 
+    color: var(--negro-elegante);
     position: relative;
     font-weight: bold;
-}
-
-
+    }
 
 /* PARA USAR EN JS Y MOSTRAR SI ESTA BIEN O MAL */
-
 .contenedor__resultados div::after {
-    content: ""; 
+    content: "";
     position: absolute;
     right: -20px;
     top: 50%;
@@ -246,52 +242,123 @@ main{
 
 .contenedor__resultados div.tic::after {
     content: "✔";
-    color: #22c55e; 
+    color: #22c55e;
 }
 
-
-.contenedor__resultados div.cruz::after {
+    .contenedor__resultados div.cruz::after {
     content: "✖";
-    color: #ef4444; 
-}
+    color: #ef4444;
+    }
 
-/* boton de  next */
-#next {
+    /* boton de next */
+    #next {
     position: absolute;
     right: 0;
     transform: translateX(-30px) translateY(-45px);
     cursor: pointer;
     border: none;
-}
+    }
 
-i {
+    i {
     color: var(--amarillo-js);
     font-size: 2rem;
-}
+    }
 
-#previous {
+    #previous {
     position: absolute;
     left: 0;
     transform: translateX(30px) translateY(-45px);
     cursor: pointer;
     border: none;
     transition: all .5s ease;
-}
+    }
 
-i {
-    color: var(--amarillo-js);
-    font-size: 2rem;
-}
-
-#next:hover,#previous:hover {
+    #next:hover,#previous:hover {
     opacity: .74;
-}
+    }
 
 /* contador preguntas */
-
 #span-contador {
     font-size: 1.7rem;
     color: var(--negro-elegante);
     padding-left: 1rem;
     width: 100px;
+}
+
+/* RESPONSIVE — tablet  (≤ 900px)  */
+@media (max-width: 900px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        gap: 1.5rem;
+    }
+
+    .contenedor__principal{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contenedor__derecha{
+        width: 100%;
+        padding: 0 0 2rem 0;
+    }
+
+    .contenedor__resultados{
+        margin: 0;
+    }
+}
+
+/* RESPONSIVE — móvil (≤ 480px) */
+@media (max-width: 480px) {
+    header{
+        padding: 0 .75rem;
+    }
+
+    header img{
+        height: 70px;
+    }
+
+    .apertura{
+        position: relative;
+        top: auto;
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    main{
+        margin-top: 16px;
+        padding: 0 .75rem;
+    }
+
+    .contenedor__principal{
+        padding: .75rem;
+    }
+
+    #pregunta{
+        font-size: 1.3rem;
+        margin: 1rem 1rem .75rem 1rem;
+    }
+
+    .ubicando-estetica{
+        font-size: 1.5rem;
+    }
+
+    .opciones{
+        width: 95%;
+        padding: 1rem 0 1rem 1rem;
+        gap: 1rem;
+        margin: 1rem .5rem;
+    }
+
+    .opciones p{
+        font-size: 1.1rem;
+    }
+
+    .contenedor__resultados{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
 }
