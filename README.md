@@ -1,8 +1,8 @@
 # 🧠 JavaScript Quiz
 
-![HTML](https://img.shields.io/badge/HTML-21%25-orange?style=flat-square&logo=html5)
-![CSS](https://img.shields.io/badge/CSS-33%25-blue?style=flat-square&logo=css3)
-![JavaScript](https://img.shields.io/badge/JavaScript-45%25-yellow?style=flat-square&logo=javascript)
+![JavaScript](https://img.shields.io/badge/JavaScript-41%25-yellow?style=flat-square&logo=javascript)
+![CSS](https://img.shields.io/badge/CSS-40%25-blue?style=flat-square&logo=css3)
+![HTML](https://img.shields.io/badge/HTML-19%25-orange?style=flat-square&logo=html5)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
 An **interactive quiz application** built with Vanilla JavaScript, HTML, and CSS. Test your knowledge with multiple-choice questions, track your score in real time, and navigate freely between questions.
@@ -36,7 +36,7 @@ Quizz-/
 
 ---
 
-## 🚀 Getting Started
+## ▶️ Getting Started
 
 No installation or build steps required. Just open the project in your browser:
 
